@@ -1,0 +1,16 @@
+<?php
+// Definisi awal variabel $angka
+$angka = 10;
+
+// Tampilkan nilai $angka sebelum diubah
+echo "Nilai awal \$angka: " . $angka . "<br>";
+
+// Beberapa baris kode di sini (simulasi)
+// Misalnya operasi atau proses lain
+
+// Ubah nilai $angka
+$angka = 20;
+
+// Tampilkan nilai $angka setelah diubah
+echo "Nilai setelah diubah \$angka: " . $angka;
+?>
