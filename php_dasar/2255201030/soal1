@@ -1,0 +1,14 @@
+<?php 
+
+$nama = "john doe";
+
+if (isset($nama)) {
+
+
+ 
+echo "nama"= $nama;
+} else {
+    
+}
+
+?>
