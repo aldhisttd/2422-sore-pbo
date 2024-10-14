@@ -8,4 +8,11 @@ $total = $umur * $angka;
 
 echo $nama;
 
+
+$tes = 2;
+
+if(isset($tes)){
+    echo $tes;
+}
+
 ?>
