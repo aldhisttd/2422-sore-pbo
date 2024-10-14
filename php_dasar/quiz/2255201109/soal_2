@@ -1,0 +1,10 @@
+<?php
+
+$angka = 10;
+
+echo "Nilai awal \$angka: " . $angka . "<br>";
+
+$angka = 25;
+
+echo "Nilai setelah diubah \$angka: " . $angka . "<br>";
+?>
