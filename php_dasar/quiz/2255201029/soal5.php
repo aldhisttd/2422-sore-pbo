@@ -2,6 +2,6 @@
 
 // ?nama=fulan
 
-$umur = $_REQUEST['nama'];
+$nama = $_REQUEST['nama'];
 
 echo $nama;
