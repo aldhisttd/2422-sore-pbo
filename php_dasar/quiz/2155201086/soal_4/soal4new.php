@@ -1,10 +1,11 @@
 <?php 
+
 session_start();
 
-if(isset($SESSION['STATUS']))
+if(isset($_SESSION['status']))
 
 {
-    echo $SESSION['STATUS'];
+    echo $_SESSION['status'];
 }
 
 
