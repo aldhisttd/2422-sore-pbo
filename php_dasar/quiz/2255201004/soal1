@@ -1,0 +1,7 @@
+<?php
+
+$nama ="jhon Doe";
+
+if (isset($nama)){
+    echo $nama;
+}
