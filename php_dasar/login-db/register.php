@@ -11,7 +11,7 @@ if(isset($_SESSION['login'])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form Login</title>
+    <title>Form Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
 </head>
@@ -33,7 +33,7 @@ if(isset($_SESSION['login'])){
                 </div>
                 
 
-                <form action="proses/login.php" method="POST">
+                <form action="proses/registrasi.php" method="POST">
 
                     <div class="bg-white p-5 shadow-sm p-3 mb-5 rounded">
                     
@@ -47,10 +47,10 @@ if(isset($_SESSION['login'])){
                     }
                     ?>
                     
-                        <h3>Form Login</h3>
+                        <h3>Form Registrasi</h3>
                         <div class="mb-3">
                             <label class="form-label">Username</label>
-                            <input name="username" type="text" class="form-control form-control-lg <?= (isset($_SESSION['msg-user']))?"is-invalid":null ?>">
+                            <input name="username" value="<?= (isset($_SESSION['username_cache']))?$_SESSION['username_cache']:null ?>" type="text" class="form-control form-control-lg <?= (isset($_SESSION['msg-user']))?"is-invalid":null ?>">
                             <?php 
                             if(isset($_SESSION['msg-user'])){
                             ?>
@@ -77,13 +77,26 @@ if(isset($_SESSION['login'])){
                             <?php
                             }
                             ?>
+
+                            <input type="password" name="password_confirmation" class="mt-2 form-control form-control-lg <?= (isset($_SESSION['msg-pass-conf']))?"is-invalid":null ?>">
+                            <?php 
+                            if(isset($_SESSION['msg-pass-conf'])){
+                            ?>
+
+                                <div id="validationServer03Feedback" class="invalid-feedback">
+                                    <?= $_SESSION['msg-pass-conf'] ?>
+                                </div>
+
+                            <?php
+                            }
+                            ?>
                         </div>
                         <div class="text-end">
-                            <button type="submit" name="btn-login" class="btn btn-primary btn-lg">Login</button>
+                            <button type="submit" name="btn-register" class="btn btn-primary btn-lg">Register New User</button>
                         </div>
 
                         <div>
-                            <a href="register.php">Register</a>
+                            <a href="form.php">Login</a>
                         </div>
 
                     </div>

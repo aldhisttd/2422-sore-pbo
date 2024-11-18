@@ -47,7 +47,7 @@ if(isset($_SESSION['login'])){
                     }
                     ?>
                     
-                        <h3>Form Login</h3>
+
                         <div class="mb-3">
                             <label class="form-label">Username</label>
                             <input name="username" type="text" class="form-control form-control-lg <?= (isset($_SESSION['msg-user']))?"is-invalid":null ?>">
@@ -80,10 +80,6 @@ if(isset($_SESSION['login'])){
                         </div>
                         <div class="text-end">
                             <button type="submit" name="btn-login" class="btn btn-primary btn-lg">Login</button>
-                        </div>
-
-                        <div>
-                            <a href="register.php">Register</a>
                         </div>
 
                     </div>
